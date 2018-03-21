@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		148832411EFC3B250043E0AB /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148832401EFC3B250043E0AB /* FocusSquareSegment.swift */; };
+		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
+		3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3929C48F1E89EC2C00E00B60 /* Main.storyboard */; };
+		3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3929C4921E89EC2C00E00B60 /* Assets.xcassets */; };
+		3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3929C49E1E89EE4400E00B60 /* Models.scnassets */; };
+		39C0B95A1E9C6B1F003FCA0C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C0B9581E9C6B1F003FCA0C /* Utilities.swift */; };
+		39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */; };
+		C41366B91EB80DD400EC054A /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41366B81EB80DD400EC054A /* StatusViewController.swift */; };
+		C42A71BD1E9C0AF200944367 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A71BC1E9C0AF200944367 /* FocusSquare.swift */; };
+		C46356671EF9CC500080C8D9 /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46356661EF9CC480080C8D9 /* VirtualObjectARView.swift */; };
+		C46356681EF9CC530080C8D9 /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46356651EF9CB1A0080C8D9 /* VirtualObjectLoader.swift */; };
+		C812D8681F47628300344E73 /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C812D8671F47628300344E73 /* ThresholdPanGesture.swift */; };
+		C8C2AC521F3A545C00E86BA3 /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2AC511F3A545C00E86BA3 /* VirtualObjectInteraction.swift */; };
+		C8D71A001F3B7D3D0086AD64 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D719FF1F3B7D3D0086AD64 /* VirtualObject.swift */; };
+		EA70FB852062EE93002AF4D9 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70FB7C2062EE93002AF4D9 /* MoneyViewController.swift */; };
+		EA70FB862062EE93002AF4D9 /* MoneyViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70FB7D2062EE93002AF4D9 /* MoneyViewController+Actions.swift */; };
+		EA70FB872062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70FB7E2062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift */; };
+		EAF547B82062EA700023F7CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EAF547B72062EA700023F7CE /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		148832401EFC3B250043E0AB /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		3929C4881E89EC2C00E00B60 /* ARBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3929C4901E89EC2C00E00B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3929C4921E89EC2C00E00B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3929C4971E89EC2C00E00B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3929C49E1E89EE4400E00B60 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
+		39C0B9581E9C6B1F003FCA0C /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2751910A274F37000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		C41366B81EB80DD400EC054A /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		C42A71BC1E9C0AF200944367 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		C46356651EF9CB1A0080C8D9 /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
+		C46356661EF9CC480080C8D9 /* VirtualObjectARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
+		C812D8671F47628300344E73 /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		C8C2AC511F3A545C00E86BA3 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
+		C8D719FF1F3B7D3D0086AD64 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		EA70FB7C2062EE93002AF4D9 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		EA70FB7D2062EE93002AF4D9 /* MoneyViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoneyViewController+Actions.swift"; sourceTree = "<group>"; };
+		EA70FB7E2062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoneyViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		EAF547B72062EA700023F7CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3929C4851E89EC2C00E00B60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		113B64D01ECA81CA0071CBD1 /* Focus Square */ = {
+			isa = PBXGroup;
+			children = (
+				C42A71BC1E9C0AF200944367 /* FocusSquare.swift */,
+				148832401EFC3B250043E0AB /* FocusSquareSegment.swift */,
+			);
+			path = "Focus Square";
+			sourceTree = "<group>";
+		};
+		1488324A1EFC3E9C0043E0AB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				39C0B9581E9C6B1F003FCA0C /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1488324B1EFC3EBF0043E0AB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA70FB7A2062EE93002AF4D9 /* MoneyViewController */,
+				C41366B81EB80DD400EC054A /* StatusViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1488324C1EFC3ED00043E0AB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3929C49E1E89EE4400E00B60 /* Models.scnassets */,
+				3929C4921E89EC2C00E00B60 /* Assets.xcassets */,
+				3929C4971E89EC2C00E00B60 /* Info.plist */,
+				3929C48F1E89EC2C00E00B60 /* Main.storyboard */,
+				39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3929C47F1E89EC2C00E00B60 = {
+			isa = PBXGroup;
+			children = (
+				EAF547B72062EA700023F7CE /* README.md */,
+				3929C48A1E89EC2C00E00B60 /* ARBanking */,
+				3929C4891E89EC2C00E00B60 /* Products */,
+				A274FF00A2750CA000000001 /* Configuration */,
+			);
+			sourceTree = "<group>";
+		};
+		3929C4891E89EC2C00E00B60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3929C4881E89EC2C00E00B60 /* ARBanking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3929C48A1E89EC2C00E00B60 /* ARBanking */ = {
+			isa = PBXGroup;
+			children = (
+				3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */,
+				C8C2AC511F3A545C00E86BA3 /* VirtualObjectInteraction.swift */,
+				C812D8671F47628300344E73 /* ThresholdPanGesture.swift */,
+				C46356661EF9CC480080C8D9 /* VirtualObjectARView.swift */,
+				C40DF57B1EC2330700D9D59E /* Virtual Objects */,
+				113B64D01ECA81CA0071CBD1 /* Focus Square */,
+				1488324B1EFC3EBF0043E0AB /* View Controllers */,
+				1488324A1EFC3E9C0043E0AB /* Utilities */,
+				1488324C1EFC3ED00043E0AB /* Resources */,
+			);
+			path = ARBanking;
+			sourceTree = "<group>";
+		};
+		A274FF00A2750CA000000001 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A2751910A274F37000000001 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		C40DF57B1EC2330700D9D59E /* Virtual Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C8D719FF1F3B7D3D0086AD64 /* VirtualObject.swift */,
+				C46356651EF9CB1A0080C8D9 /* VirtualObjectLoader.swift */,
+			);
+			path = "Virtual Objects";
+			sourceTree = "<group>";
+		};
+		EA70FB7A2062EE93002AF4D9 /* MoneyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA70FB7C2062EE93002AF4D9 /* MoneyViewController.swift */,
+				EA70FB7D2062EE93002AF4D9 /* MoneyViewController+Actions.swift */,
+				EA70FB7E2062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift */,
+			);
+			path = MoneyViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3929C4871E89EC2C00E00B60 /* ARBanking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3929C49A1E89EC2C00E00B60 /* Build configuration list for PBXNativeTarget "ARBanking" */;
+			buildPhases = (
+				3929C4841E89EC2C00E00B60 /* Sources */,
+				3929C4851E89EC2C00E00B60 /* Frameworks */,
+				3929C4861E89EC2C00E00B60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARBanking;
+			productName = ARKitInteraction;
+			productReference = 3929C4881E89EC2C00E00B60 /* ARBanking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3929C4801E89EC2C00E00B60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = IngARteam;
+				TargetAttributes = {
+					3929C4871E89EC2C00E00B60 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 2ZUGFWU8RB;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3929C4831E89EC2C00E00B60 /* Build configuration list for PBXProject "ARBanking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3929C47F1E89EC2C00E00B60;
+			productRefGroup = 3929C4891E89EC2C00E00B60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3929C4871E89EC2C00E00B60 /* ARBanking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3929C4861E89EC2C00E00B60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */,
+				39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */,
+				EAF547B82062EA700023F7CE /* README.md in Resources */,
+				3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */,
+				3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3929C4841E89EC2C00E00B60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C812D8681F47628300344E73 /* ThresholdPanGesture.swift in Sources */,
+				EA70FB862062EE93002AF4D9 /* MoneyViewController+Actions.swift in Sources */,
+				C41366B91EB80DD400EC054A /* StatusViewController.swift in Sources */,
+				39C0B95A1E9C6B1F003FCA0C /* Utilities.swift in Sources */,
+				C8C2AC521F3A545C00E86BA3 /* VirtualObjectInteraction.swift in Sources */,
+				C46356671EF9CC500080C8D9 /* VirtualObjectARView.swift in Sources */,
+				148832411EFC3B250043E0AB /* FocusSquareSegment.swift in Sources */,
+				C8D71A001F3B7D3D0086AD64 /* VirtualObject.swift in Sources */,
+				C42A71BD1E9C0AF200944367 /* FocusSquare.swift in Sources */,
+				EA70FB872062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift in Sources */,
+				3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */,
+				EA70FB852062EE93002AF4D9 /* MoneyViewController.swift in Sources */,
+				C46356681EF9CC530080C8D9 /* VirtualObjectLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3929C48F1E89EC2C00E00B60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3929C4901E89EC2C00E00B60 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3929C4981E89EC2C00E00B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2751910A274F37000000001 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3929C4991E89EC2C00E00B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2751910A274F37000000001 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3929C49B1E89EC2C00E00B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2751910A274F37000000001 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZUGFWU8RB;
+				INFOPLIST_FILE = "$(SRCROOT)/ARBanking/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ingARTeam.ARBanking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3929C49C1E89EC2C00E00B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2751910A274F37000000001 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZUGFWU8RB;
+				INFOPLIST_FILE = "$(SRCROOT)/ARBanking/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ingARTeam.ARBanking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3929C4831E89EC2C00E00B60 /* Build configuration list for PBXProject "ARBanking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3929C4981E89EC2C00E00B60 /* Debug */,
+				3929C4991E89EC2C00E00B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3929C49A1E89EC2C00E00B60 /* Build configuration list for PBXNativeTarget "ARBanking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3929C49B1E89EC2C00E00B60 /* Debug */,
+				3929C49C1E89EC2C00E00B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3929C4801E89EC2C00E00B60 /* Project object */;
+}
