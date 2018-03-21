@@ -9,6 +9,11 @@ import ARKit
 import SceneKit
 import UIKit
 
+enum MoneyLoadingState {
+    case notReady, ready, loading, loaded
+}
+
+
 class MoneyViewController: UIViewController {
     
     // MARK: IBOutlets
@@ -22,8 +27,6 @@ class MoneyViewController: UIViewController {
     // MARK: - UI Elements
     
     var focusSquare = FocusSquare()
-    
-    var moneyLoaded: Bool = false
     
     /// The view controller that displays the status and "restart experience" UI.
     lazy var statusViewController: StatusViewController = {
@@ -40,6 +43,8 @@ class MoneyViewController: UIViewController {
     
     /// Marks if the AR experience is available for restart.
     var isRestartAvailable = true
+    
+    var loadingState: MoneyLoadingState = .notReady
     
     /// A serial queue used to coordinate adding or removing nodes from the scene.
     let updateQueue = DispatchQueue(label: "com.example.apple-samplecode.arkitexample.serialSceneKitQueue")
@@ -58,8 +63,6 @@ class MoneyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        focusSquare.delegate = self
         
         sceneView.delegate = self
         sceneView.session.delegate = self
@@ -83,11 +86,6 @@ class MoneyViewController: UIViewController {
         statusViewController.restartExperienceHandler = { [unowned self] in
             self.restartExperience()
         }
-        
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(loadMoney))
-        // Set the delegate to ensure this gesture is only used when there are no virtual objects in the scene.
-//        tapGesture.delegate = self
-//        sceneView.addGestureRecognizer(tapGesture)
     }
     
     @objc func loadMoney() {
@@ -102,6 +100,8 @@ class MoneyViewController: UIViewController {
 
         // Start the `ARSession`.
         resetTracking()
+        loadingState = .ready
+
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -134,15 +134,19 @@ class MoneyViewController: UIViewController {
 		virtualObjectInteraction.selectedObject = nil
 		
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.planeDetection = [.horizontal]
 		session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-
         statusViewController.scheduleMessage("FIND A SURFACE TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .planeEstimation)
 	}
 
     // MARK: - Focus Square
 
 	func updateFocusSquare() {
+        
+        guard loadingState == .ready else {
+            return
+        }
+        
         let isObjectVisible = virtualObjectLoader.loadedObjects.contains { object in
             return sceneView.isNode(object, insideFrustumOf: sceneView.pointOfView!)
         }
@@ -160,6 +164,9 @@ class MoneyViewController: UIViewController {
 				let camera = self.session.currentFrame?.camera
 				self.focusSquare.state = .detecting(hitTestResult: result, camera: camera)
 			}
+            if (result.anchor as? ARPlaneAnchor) != nil {
+                self.foundPlane()
+            }
 		} else {
 			updateQueue.async {
 				self.focusSquare.state = .initializing
@@ -230,16 +237,20 @@ extension MoneyViewController {
     
     func loadModel(modelName: String) {
         if let filePath = Bundle.main.path(forResource: modelName, ofType: "scn", inDirectory: "Models.scnassets/\(modelName)") {
-            let referenceURL = NSURL(fileURLWithPath: filePath)
-            if let referenceNode = VirtualObject(url: referenceURL as URL) {
+            let referenceURL = URL(fileURLWithPath: filePath)
+            if let referenceNode = VirtualObject(url: referenceURL) {
                 virtualObjectLoader.loadVirtualObject(referenceNode, loadedHandler: { [unowned self] loadedObject in
                     DispatchQueue.main.async {
                         self.hideObjectLoadingUI()
                         self.placeVirtualObject(loadedObject)
-                        self.moneyLoaded = true
+                        self.loadingState = .loaded
                     }
                 })
+            } else {
+                loadingState = .ready
             }
+        } else {
+            loadingState = .ready
         }
         DispatchQueue.main.async {
             self.displayObjectLoadingUI()
@@ -259,13 +270,11 @@ extension MoneyViewController {
         spinner.stopAnimating()
         isRestartAvailable = true
     }
-}
 
-extension MoneyViewController: FocusSquareDelegate {
     func foundPlane() {
-        if !moneyLoaded {
+        if loadingState == .ready {
             loadMoney()
-            moneyLoaded = true
+            loadingState = .loading
         }
     }
 }

@@ -13,10 +13,6 @@ import ARKit
  - Tag: FocusSquare
  */
 
-protocol FocusSquareDelegate: class {
-    func foundPlane()
-}
-
 class FocusSquare: SCNNode {
     // MARK: - Types
     
@@ -47,8 +43,6 @@ class FocusSquare: SCNNode {
     // Color of the focus square fill.
     static let fillColor = #colorLiteral(red: 1, green: 0.9254901961, blue: 0.4117647059, alpha: 1)
     
-    weak var delegate: FocusSquareDelegate?
-    
     // MARK: - Properties
     
     /// The most recent position of the focus square based on the current state.
@@ -71,8 +65,7 @@ class FocusSquare: SCNNode {
 				if let planeAnchor = hitTestResult.anchor as? ARPlaneAnchor {
 					displayAsClosed(for: hitTestResult, planeAnchor: planeAnchor, camera: camera)
 					currentPlaneAnchor = planeAnchor
-                    delegate?.foundPlane()
-				} else {
+                } else {
 					displayAsOpen(for: hitTestResult, camera: camera)
 					currentPlaneAnchor = nil
 				}

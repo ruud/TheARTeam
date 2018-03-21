@@ -31,16 +31,18 @@ extension MoneyViewController: UIGestureRecognizerDelegate {
     func restartExperience() {
         guard isRestartAvailable, !virtualObjectLoader.isLoading else { return }
         isRestartAvailable = false
+        self.loadingState = .notReady
 
         statusViewController.cancelAllScheduledMessages()
 
         virtualObjectLoader.removeAllVirtualObjects()
 
         resetTracking()
-
+        
         // Disable restart for a while in order to give the session time to restart.
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             self.isRestartAvailable = true
+            self.loadingState = .ready
         }
     }
 }
