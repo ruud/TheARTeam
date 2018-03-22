@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B0FE05220639FD800F188D2 /* VirtualObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0FE05120639FD800F188D2 /* VirtualObjectSelection.swift */; };
+		0BE04C772063D52F00C8E75D /* INGMe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3F02063D1CC009A736A /* INGMe-Bold.ttf */; };
+		0BE04C782063D53100C8E75D /* INGMe-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B6FC3EF2063D1CC009A736A /* INGMe-Regular.ttf */; };
 		148832411EFC3B250043E0AB /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148832401EFC3B250043E0AB /* FocusSquareSegment.swift */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
 		3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3929C48F1E89EC2C00E00B60 /* Main.storyboard */; };
@@ -29,9 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B0FE04F20639AE000F188D2 /* INGMe-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "INGMe-Regular.ttf"; sourceTree = "<group>"; };
-		0B0FE05020639AE000F188D2 /* INGMe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "INGMe-Bold.ttf"; sourceTree = "<group>"; };
 		0B0FE05120639FD800F188D2 /* VirtualObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelection.swift; sourceTree = "<group>"; };
+		0B6FC3EF2063D1CC009A736A /* INGMe-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "INGMe-Regular.ttf"; path = "ARBanking/Resources/INGMe-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		0B6FC3F02063D1CC009A736A /* INGMe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "INGMe-Bold.ttf"; path = "ARBanking/Resources/INGMe-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		148832401EFC3B250043E0AB /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* ARBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,8 +71,8 @@
 		0B0FE04E20639ACD00F188D2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0B0FE05020639AE000F188D2 /* INGMe-Bold.ttf */,
-				0B0FE04F20639AE000F188D2 /* INGMe-Regular.ttf */,
+				0B6FC3F02063D1CC009A736A /* INGMe-Bold.ttf */,
+				0B6FC3EF2063D1CC009A736A /* INGMe-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -239,6 +241,8 @@
 			files = (
 				3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */,
 				39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */,
+				0BE04C782063D53100C8E75D /* INGMe-Regular.ttf in Resources */,
+				0BE04C772063D52F00C8E75D /* INGMe-Bold.ttf in Resources */,
 				EAF547B82062EA700023F7CE /* README.md in Resources */,
 				3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */,
 				3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */,
