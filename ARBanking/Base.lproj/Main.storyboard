@@ -219,12 +219,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="cFL-2c-eYi" kind="relationship" relationship="rootViewController" id="6Y7-wd-BUh"/>
+                        <segue destination="Vcp-vo-LBj" kind="relationship" relationship="rootViewController" id="9dc-mc-9ut"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5CX-32-Tuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3174" y="99"/>
+            <point key="canvasLocation" x="-3788" y="107"/>
         </scene>
         <!--Login View ControllerFR-->
         <scene sceneID="5so-te-bL6">
@@ -279,6 +279,47 @@
             <point key="canvasLocation" x="-2193" y="99"/>
         </scene>
         <!--Login View ControllerFR-->
+        <scene sceneID="XRu-sc-vEE">
+            <objects>
+                <viewController id="Vcp-vo-LBj" customClass="LoginViewControllerFR" customModule="ARUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t4N-3M-J7o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone X - notification.png" translatesAutoresizingMaskIntoConstraints="NO" id="r42-Wm-QEi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vbd-VU-JY4" appends="YES" id="vGb-X2-gZW"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="luQ-o2-YQ0" firstAttribute="top" secondItem="r42-Wm-QEi" secondAttribute="top" id="bkK-xf-mo9"/>
+                            <constraint firstItem="luQ-o2-YQ0" firstAttribute="trailing" secondItem="r42-Wm-QEi" secondAttribute="trailing" id="lwz-vq-SUX"/>
+                            <constraint firstItem="luQ-o2-YQ0" firstAttribute="bottom" secondItem="r42-Wm-QEi" secondAttribute="bottom" id="uwf-D8-dYm"/>
+                            <constraint firstItem="r42-Wm-QEi" firstAttribute="leading" secondItem="luQ-o2-YQ0" secondAttribute="leading" id="z5x-5K-RIM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="luQ-o2-YQ0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Oj-lH-pLg"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="uiIMageViewFR" destination="r42-Wm-QEi" id="HHW-pC-lLV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJj-x7-ofM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vbd-VU-JY4">
+                    <connections>
+                        <segue destination="cFL-2c-eYi" kind="show" id="bpg-bZ-w2W"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-3028" y="99"/>
+        </scene>
+        <!--Login View ControllerFR-->
         <scene sceneID="YAu-0W-UTy">
             <objects>
                 <viewController id="B24-kD-xuy" customClass="LoginViewControllerFR" customModule="ARUI" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,69 +365,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpb-3f-8fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="rq4-JW-Wn7">
                     <connections>
-                        <segue destination="ogb-Ro-AKQ" kind="show" id="YUy-f5-9wj"/>
+                        <segue destination="BV1-FR-VrT" kind="show" id="hrh-1E-ebl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1386.4000000000001" y="98.50074962518741"/>
         </scene>
-        <!--Login View ControllerFR-->
-        <scene sceneID="Aoh-r1-JdF">
-            <objects>
-                <viewController id="ogb-Ro-AKQ" customClass="LoginViewControllerFR" customModule="ARUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hZm-7T-MXt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiscoverDialog.png" translatesAutoresizingMaskIntoConstraints="NO" id="zj7-dw-ZrJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gaf-5r-q5E" appends="YES" id="rqS-UF-thC"/>
-                                </connections>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WV8-oB-aLv">
-                                <rect key="frame" x="0.0" y="598" width="375" height="69"/>
-                                <color key="backgroundColor" red="0.49804621934890747" green="0.49802654981613159" blue="0.49803990125656128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="wA8-to-Vja"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="WV8-oB-aLv" firstAttribute="leading" secondItem="CaH-64-PI0" secondAttribute="leading" id="2WC-1b-ROu"/>
-                            <constraint firstItem="CaH-64-PI0" firstAttribute="bottom" secondItem="WV8-oB-aLv" secondAttribute="bottom" id="9UA-dD-bjQ"/>
-                            <constraint firstItem="CaH-64-PI0" firstAttribute="bottom" secondItem="zj7-dw-ZrJ" secondAttribute="bottom" id="Ne7-Na-UnE"/>
-                            <constraint firstItem="CaH-64-PI0" firstAttribute="trailing" secondItem="zj7-dw-ZrJ" secondAttribute="trailing" id="VQH-EY-lK8"/>
-                            <constraint firstItem="CaH-64-PI0" firstAttribute="trailing" secondItem="WV8-oB-aLv" secondAttribute="trailing" id="Wk6-1i-ZlK"/>
-                            <constraint firstItem="CaH-64-PI0" firstAttribute="top" secondItem="zj7-dw-ZrJ" secondAttribute="top" id="s44-ow-9WG"/>
-                            <constraint firstItem="zj7-dw-ZrJ" firstAttribute="leading" secondItem="CaH-64-PI0" secondAttribute="leading" id="vyE-c0-kiA"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="CaH-64-PI0"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="v8l-a9-WJS"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="uiIMageViewFR" destination="zj7-dw-ZrJ" id="LBV-hV-TG0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jnu-UV-vw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gaf-5r-q5E">
-                    <connections>
-                        <segue destination="BV1-FR-VrT" kind="show" id="RKu-TB-lKl"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-628" y="98.50074962518741"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="DiscoverDialog.png" width="720" height="1280"/>
         <image name="add" width="48" height="48"/>
         <image name="iPhone X - login.png" width="750" height="1624"/>
         <image name="iPhone X - login2.png" width="375" height="812"/>
+        <image name="iPhone X - notification.png" width="750" height="1624"/>
         <image name="restart" width="20" height="23"/>
         <image name="restartPressed" width="20" height="23"/>
     </resources>
