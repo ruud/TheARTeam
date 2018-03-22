@@ -17,8 +17,7 @@ extension MoneyViewController: UIGestureRecognizerDelegate {
     // MARK: - Interface Actions
     
     @IBAction func showVirtualObjectSelectionViewController() {
-        //performSegue(withIdentifier: SegueIdentifier.showObjects.rawValue, sender: addObjectButton)
-        let position = focusSquare.lastPosition
+        performSegue(withIdentifier: SegueIdentifier.showObjects.rawValue, sender: addObjectButton)
     }
     
     /// Determines if the tap gesture for presenting the `VirtualObjectSelectionViewController` should be used.
