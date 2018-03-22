@@ -130,13 +130,23 @@
                                     <segue destination="ri3-7p-e6d" kind="embed" id="uiU-1f-e8S"/>
                                 </connections>
                             </containerView>
-                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-dQ-oXx">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Y-X2-JEp" userLabel="Add Object Button">
+                                <rect key="frame" x="163" y="601" width="48" height="48"/>
+                                <state key="normal" image="add">
+                                    <color key="titleColor" red="0.85882352939999995" green="0.72941176470000002" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-dQ-oXx">
                                 <rect key="frame" x="166" y="607" width="43" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="SjQ-nL-VXo"/>
+                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="v0Y-X2-JEp" firstAttribute="centerX" secondItem="tnx-rc-95S" secondAttribute="centerX" id="9by-GG-bLu"/>
+                            <constraint firstItem="3cb-dQ-oXx" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" constant="166" id="Gfb-KU-iTH"/>
                             <constraint firstAttribute="trailing" secondItem="R5W-V8-6lY" secondAttribute="trailing" id="J42-1v-Ihf"/>
                             <constraint firstItem="tnx-rc-95S" firstAttribute="top" secondItem="GBj-4O-Whc" secondAttribute="top" id="Sdx-fT-fqG"/>
                             <constraint firstItem="R5W-V8-6lY" firstAttribute="leading" secondItem="RLh-bf-1c3" secondAttribute="leading" id="Yj0-Fo-B5n"/>
@@ -145,7 +155,10 @@
                             <constraint firstItem="tnx-rc-95S" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="cGf-LE-hzb"/>
                             <constraint firstItem="R5W-V8-6lY" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="fDn-zw-Oo2"/>
                             <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="kLb-BI-xJ4"/>
+                            <constraint firstItem="3cb-dQ-oXx" firstAttribute="centerX" secondItem="v0Y-X2-JEp" secondAttribute="centerX" id="pLS-OQ-bhe"/>
                             <constraint firstAttribute="bottom" secondItem="R5W-V8-6lY" secondAttribute="bottom" id="poH-DX-LIv"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="3cb-dQ-oXx" secondAttribute="bottom" constant="17" id="rKY-5h-nN4"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="v0Y-X2-JEp" secondAttribute="bottom" constant="25" id="umG-Gn-Fad"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="wEL-Op-yTe"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="tnx-rc-95S" secondAttribute="trailing" id="yUU-ir-Rk1"/>
                         </constraints>
@@ -163,6 +176,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="48" height="48"/>
         <image name="restart" width="20" height="23"/>
         <image name="restartPressed" width="20" height="23"/>
     </resources>
