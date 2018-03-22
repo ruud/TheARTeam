@@ -89,7 +89,21 @@ class MoneyViewController: UIViewController {
     }
     
     @objc func loadMoney() {
-        loadModel(modelName: "5bill")
+        virtualObjectLoader.loadVirtualObject(name: "5bill", count: 2, completion: { [unowned self] result in
+            switch result {
+            case .failed:
+                self.loadingState = .ready
+            case .success(let nodes):
+                DispatchQueue.main.async {
+                    self.hideObjectLoadingUI()
+                    nodes.forEach{ self.placeVirtualObject($0) }
+                    self.loadingState = .loaded
+                }
+            }
+        })
+        DispatchQueue.main.async {
+            self.displayObjectLoadingUI()
+        }
     }
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -230,30 +244,6 @@ extension MoneyViewController {
         updateQueue.async {
             self.sceneView.scene.rootNode.addChildNode(virtualObject)
             self.sceneView.addOrUpdateAnchor(for: virtualObject)
-        }
-    }
-    
-    // MARK: - VirtualObjectSelectionViewControllerDelegate
-    
-    func loadModel(modelName: String) {
-        if let filePath = Bundle.main.path(forResource: modelName, ofType: "scn", inDirectory: "Models.scnassets/\(modelName)") {
-            let referenceURL = URL(fileURLWithPath: filePath)
-            if let referenceNode = VirtualObject(url: referenceURL) {
-                virtualObjectLoader.loadVirtualObject(referenceNode, loadedHandler: { [unowned self] loadedObject in
-                    DispatchQueue.main.async {
-                        self.hideObjectLoadingUI()
-                        self.placeVirtualObject(loadedObject)
-                        self.loadingState = .loaded
-                    }
-                })
-            } else {
-                loadingState = .ready
-            }
-        } else {
-            loadingState = .ready
-        }
-        DispatchQueue.main.async {
-            self.displayObjectLoadingUI()
         }
     }
     

@@ -27,6 +27,12 @@ class VirtualObject: SCNReferenceNode {
         self.allowedAlignments = allowedAlignments
     }
 	
+    override func copy() -> Any {
+        let copy = super.copy() as! VirtualObject
+        copy.allowedAlignments = self.allowedAlignments
+        self.childNodes.forEach{ copy.addChildNode($0.copy() as! SCNNode) }
+        return copy
+    }
 	/// Current alignment of the virtual object
 	var currentAlignment: ARPlaneAnchor.Alignment = .horizontal
 	
@@ -45,7 +51,7 @@ class VirtualObject: SCNReferenceNode {
 			if normalized > .pi {
 				normalized -= 2 * .pi
 			}
-			childNodes.first!.eulerAngles.y = normalized
+            childNodes.forEach{ $0.eulerAngles.y = normalized }
 			if currentAlignment == .horizontal {
 				rotationWhenAlignedHorizontally = normalized
 			}

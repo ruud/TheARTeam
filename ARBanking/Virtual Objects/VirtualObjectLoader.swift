@@ -12,6 +12,11 @@ import ARKit
  Loads multiple `VirtualObject`s on a background queue to be able to display the
  objects quickly once they are needed.
 */
+enum VirtualObjectLoaderResult {
+    case success([VirtualObject])
+    case failed
+}
+
 class VirtualObjectLoader {
 	private(set) var loadedObjects = [VirtualObject]()
     
@@ -23,19 +28,35 @@ class VirtualObjectLoader {
      Loads a `VirtualObject` on a background queue. `loadedHandler` is invoked
      on a background queue once `object` has been loaded.
     */
-    func loadVirtualObject(_ object: VirtualObject, loadedHandler: @escaping (VirtualObject) -> Void) {
-        isLoading = true
-		loadedObjects.append(object)
-		
-		// Load the content asynchronously.
-        DispatchQueue.global(qos: .userInitiated).async {
-            object.reset()
-            object.load()
 
-            self.isLoading = false
-            loadedHandler(object)
+    func loadVirtualObject(name: String, count:Int = 1, completion: @escaping (VirtualObjectLoaderResult) -> Void) {
+        
+        guard let filePath = Bundle.main.path(forResource: name, ofType: "scn", inDirectory: "Models.scnassets/\(name)")  else {
+            completion(.failed)
+            return
         }
-	}
+        let referenceURL = URL(fileURLWithPath: filePath)
+        guard let node = VirtualObject(url: referenceURL)  else {
+            completion(.failed)
+            return
+        }
+        isLoading = true
+        
+        // Load the content asynchronously.
+        DispatchQueue.global(qos: .userInitiated).async {
+            node.reset()
+            node.load()
+            var nodes = [node]
+            for _ in  1...count {
+                let copyNode = node.copy() as! VirtualObject
+                nodes.append(copyNode)
+            }
+            self.loadedObjects.append(contentsOf: nodes)
+            self.isLoading = false
+            completion(.success(nodes))
+        }
+    }
+    
     
     // MARK: - Removing Objects
     
