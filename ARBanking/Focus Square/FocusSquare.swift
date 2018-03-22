@@ -27,7 +27,7 @@ class FocusSquare: SCNNode {
     static let size: Float = 0.17
     
     // Thickness of the focus square lines in meters.
-    static let thickness: Float = 0.018
+    static let thickness: Float = 0.072
     
     // Scale factor for the focus square when it is closed, w.r.t. the original size.
     static let scaleForClosedSquare: Float = 0.97
@@ -38,10 +38,10 @@ class FocusSquare: SCNNode {
     // Duration of the open/close animation
     static let animationDuration = 0.7
     
-    static let primaryColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+    static let primaryColor = #colorLiteral(red: 1, green: 0.3843137255, blue: 0, alpha: 1)
     
     // Color of the focus square fill.
-    static let fillColor = #colorLiteral(red: 1, green: 0.9254901961, blue: 0.4117647059, alpha: 1)
+    static let fillColor = #colorLiteral(red: 1, green: 0.3843137255, blue: 0, alpha: 1)
     
     // MARK: - Properties
     
@@ -494,11 +494,11 @@ private func pulseAction() -> SCNAction {
 private func flashAnimation(duration: TimeInterval) -> SCNAction {
     let action = SCNAction.customAction(duration: duration) { (node, elapsedTime) -> Void in
         // animate color from HSB 48/100/100 to 48/30/100 and back
-        let elapsedTimePercentage = elapsedTime / CGFloat(duration)
-        let saturation = 2.8 * (elapsedTimePercentage - 0.5) * (elapsedTimePercentage - 0.5) + 0.3
-        if let material = node.geometry?.firstMaterial {
-            material.diffuse.contents = UIColor(hue: 0.1333, saturation: saturation, brightness: 1.0, alpha: 1.0)
-        }
+//        let elapsedTimePercentage = elapsedTime / CGFloat(duration)
+//        let saturation = 2.8 * (elapsedTimePercentage - 0.5) * (elapsedTimePercentage - 0.5) + 0.3
+//        if let material = node.geometry?.firstMaterial {
+//            material.diffuse.contents = UIColor(hue: 0.1333, saturation: saturation, brightness: 1.0, alpha: 1.0)
+//        }
     }
     return action
 }

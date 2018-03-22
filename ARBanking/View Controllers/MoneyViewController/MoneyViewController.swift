@@ -234,6 +234,11 @@ extension MoneyViewController {
         let scaleMatrix = float4x4(uniformScale: focusSquareScaleInverse)
         let focusSquareTransformWithoutScale = focusSquare.simdWorldTransform * scaleMatrix
         
+        // Add physics
+        let startPos = virtualObject.position
+        virtualObject.position = SCNVector3Make(startPos.x, startPos.y - 1.0, startPos.z)
+        virtualObject.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.dynamic, shape: nil)
+
         virtualObjectInteraction.selectedObject = virtualObject
         virtualObject.setTransform(focusSquareTransformWithoutScale,
                                    relativeTo: cameraTransform,
