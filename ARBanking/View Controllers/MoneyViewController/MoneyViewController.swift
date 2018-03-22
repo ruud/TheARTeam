@@ -13,6 +13,27 @@ enum MoneyLoadingState {
     case notReady, ready, loading, loaded
 }
 
+enum MoneyModels: Int {
+    case bill5, bill10, bill20, bill50, bill100, bill200, bill500
+    var name: String {
+        switch self {
+        case .bill5:
+            return "5bill"
+        case .bill10:
+            return "10bill"
+        case .bill20:
+            return "20bill"
+        case .bill50:
+            return "50bill"
+        case .bill100:
+            return "100bill"
+        case .bill200:
+            return "200bill"
+        case .bill500:
+            return "500bill"
+        }
+    }
+}
 
 class MoneyViewController: UIViewController {
     
@@ -89,7 +110,13 @@ class MoneyViewController: UIViewController {
     }
     
     @objc func loadMoney() {
-        virtualObjectLoader.loadVirtualObject(name: "5bill", count: 2, completion: { [unowned self] result in
+        loadMoneyModel(index: 0)
+    }
+    
+    func loadMoneyModel(index: Int) {
+        guard let model = MoneyModels(rawValue: index) else { return }
+        let count = Int(arc4random_uniform(UInt32(5)))
+        virtualObjectLoader.loadVirtualObject(name: model.name, count: count, completion: { [unowned self] result in
             switch result {
             case .failed:
                 self.loadingState = .ready
@@ -98,6 +125,7 @@ class MoneyViewController: UIViewController {
                     self.hideObjectLoadingUI()
                     nodes.forEach{ self.placeVirtualObject($0) }
                     self.loadingState = .loaded
+                    self.loadMoneyModel(index: index + 1)
                 }
             }
         })

@@ -47,7 +47,7 @@ class VirtualObjectLoader {
             node.reset()
             node.load()
             var nodes = [node]
-            for _ in  1...count {
+            for _ in  0..<count {
                 let copyNode = node.copy() as! VirtualObject
                 nodes.append(copyNode)
             }
