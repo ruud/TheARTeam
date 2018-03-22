@@ -54,19 +54,18 @@ extension MoneyViewController: ARSCNViewDelegate, ARSessionDelegate {
                 }
                 // Create a SceneKit plane to visualize the plane anchor using its position and extent.
                 let plane = SCNPlane(width: CGFloat(0.1), height: CGFloat(0.1))
-                let material = plane.firstMaterial!
-                //material.diffuse.contents =
-
+                plane.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "piggy")
+               // plane.materials = material
                 let planeNode = SCNNode(geometry: plane)
                 planeNode.name = "savings"
-                planeNode.simdPosition = float3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z - 0.3)
+                planeNode.simdPosition = float3(planeAnchor.center.x, planeAnchor.center.y - 0.3, planeAnchor.center.z + 0.3)
                 
                 // `SCNPlane` is vertically oriented in its local coordinate space, so
                 // rotate the plane to match the horizontal orientation of `ARPlaneAnchor`.
                 planeNode.eulerAngles.x = -.pi / 2
                 
                 // Make the plane visualization semitransparent to clearly show real-world placement.
-                planeNode.opacity = 0.2
+                planeNode.opacity = 1.0
                 
         
                 
