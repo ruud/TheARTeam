@@ -33,6 +33,25 @@ enum MoneyModels: Int {
             return "500bill"
         }
     }
+    
+    var count: Int {
+        switch self {
+        case .bill5:
+            return 4
+        case .bill10:
+            return 3
+        case .bill20:
+            return 5
+        case .bill50:
+            return 4
+        case .bill100:
+            return 2
+        case .bill200:
+            return 2
+        case .bill500:
+            return 2
+        }
+    }
 }
 
 class MoneyViewController: UIViewController {
@@ -115,8 +134,8 @@ class MoneyViewController: UIViewController {
     
     func loadMoneyModel(index: Int) {
         guard let model = MoneyModels(rawValue: index) else { return }
-        let count = Int(arc4random_uniform(UInt32(3)))
-        virtualObjectLoader.loadVirtualObject(name: model.name, count: count, completion: { [unowned self] result in
+//        let count = Int(arc4random_uniform(UInt32(3)))
+        virtualObjectLoader.loadVirtualObject(name: model.name, count: model.count, completion: { [unowned self] result in
             switch result {
             case .failed:
                 self.loadingState = .ready
@@ -280,7 +299,7 @@ extension MoneyViewController {
 
         var transform = focusSquareTransformWithoutScale
         let translation = focusSquareTransformWithoutScale.translation
-        transform.translation = float3(x: translation.x + randomAdd(), y: translation.y - randomAdd()/10, z: translation.z + randomAdd())
+        transform.translation = float3(x: translation.x + randomAdd()/2, y: translation.y - randomAdd()/10, z: translation.z + randomAdd())
         
         virtualObject.setTransform(transform,
                                    relativeTo: cameraTransform,
@@ -288,9 +307,20 @@ extension MoneyViewController {
                                    alignment: focusSquareAlignment,
                                    allowAnimation: false)
         
+        
+        
+        
         updateQueue.async {
             self.sceneView.scene.rootNode.addChildNode(virtualObject)
             self.sceneView.addOrUpdateAnchor(for: virtualObject)
+            
+            let animation = CABasicAnimation(keyPath: "position")
+            let position = virtualObject.position
+            let iniXY = randomAdd() * 20
+            animation.fromValue = SCNVector3Make(iniXY, position.y+1, iniXY)
+            animation.toValue = position
+            animation.duration = 0.5 + Double(arc4random_uniform(10)) / 10
+            virtualObject.addAnimation(animation, forKey: nil)
         }
     }
     
