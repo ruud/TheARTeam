@@ -38,10 +38,12 @@ extension MoneyViewController: UIGestureRecognizerDelegate {
         self.loadingState = .notReady
 
         statusViewController.cancelAllScheduledMessages()
+        statusViewController.hideSalaryTextView()
 
         virtualObjectLoader.removeAllVirtualObjects()
 
         resetTracking()
+        
         
         // Disable restart for a while in order to give the session time to restart.
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {

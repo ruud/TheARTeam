@@ -146,6 +146,7 @@ class MoneyViewController: UIViewController {
                     nodes.forEach{ self.placeVirtualObject($0) }
                     self.loadingState = .loaded
                     self.loadMoneyModel(index: index + 1)
+                    self.statusViewController.showSalaryTextView()
                 }
             }
         })
@@ -204,7 +205,7 @@ class MoneyViewController: UIViewController {
 
 	func updateFocusSquare() {
         
-        guard loadingState == .ready else {
+        guard loadingState != .notReady else {
             return
         }
         
@@ -215,7 +216,7 @@ class MoneyViewController: UIViewController {
         if isObjectVisible {
             focusSquare.hide()
         } else {
-            //focusSquare.unhide()
+            focusSquare.unhide()
             statusViewController.scheduleMessage("TRY MOVING LEFT OR RIGHT", inSeconds: 5.0, messageType: .focusSquare)
         }
 		

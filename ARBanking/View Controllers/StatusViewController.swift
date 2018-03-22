@@ -39,6 +39,7 @@ class StatusViewController: UIViewController {
     
     @IBOutlet weak private var restartExperienceButton: UIButton!
 
+    @IBOutlet weak var salaryTextView: UITextView!
     // MARK: - Properties
     
     /// Trigerred when the "Restart Experience" button is tapped.
@@ -53,6 +54,27 @@ class StatusViewController: UIViewController {
     private var timers: [MessageType: Timer] = [:]
     
     // MARK: - Message Handling
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideSalaryTextView()
+    }
+
+    func hideSalaryTextView() {
+        salaryTextView.alpha = 0.0
+        salaryTextView.transform = CGAffineTransform.init(translationX: -salaryTextView.frame.size.width/2, y: 0)
+    }
+
+    func showSalaryTextView() {
+        if self.salaryTextView.alpha == 0.0 {
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.5, delay: 1.5, options: [.curveEaseOut], animations: { [unowned self] in
+                    self.salaryTextView.alpha = 1.0
+                    self.salaryTextView.transform = .identity
+                    }, completion: nil)
+            }
+        }
+    }
 	
 	func showMessage(_ text: String, autoHide: Bool = true) {
         // Cancel any previous hide timer.
