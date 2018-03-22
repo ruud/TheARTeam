@@ -13,9 +13,6 @@
         <array key="INGMe-Bold.ttf">
             <string>INGMe-Bold</string>
         </array>
-        <array key="INGMe-Regular.ttf">
-            <string>INGMe</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Status View Controller-->
@@ -113,7 +110,7 @@
                                     <action selector="showVirtualObjectSelectionViewController" destination="BV1-FR-VrT" eventType="touchUpInside" id="25z-6a-sgI"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-dQ-oXx">
+                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-dQ-oXx">
                                 <rect key="frame" x="166" y="607" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="V59-PP-yBG"/>
