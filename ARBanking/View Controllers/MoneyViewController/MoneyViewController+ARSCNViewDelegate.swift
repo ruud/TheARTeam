@@ -46,9 +46,9 @@ extension MoneyViewController: ARSCNViewDelegate, ARSessionDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         updateQueue.async {
             if let planeAnchor = anchor as? ARPlaneAnchor {
-                for object in self.virtualObjectLoader.loadedObjects {
-                    object.adjustOntoPlaneAnchor(planeAnchor, using: node)
-                }
+//                for object in self.virtualObjectLoader.loadedObjects {
+//                    object.adjustOntoPlaneAnchor(planeAnchor, using: node)
+//                }
             } else {
                 if let objectAtAnchor = self.virtualObjectLoader.loadedObjects.first(where: { $0.anchor == anchor }) {
                     objectAtAnchor.simdPosition = anchor.transform.translation

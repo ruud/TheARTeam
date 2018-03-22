@@ -115,7 +115,7 @@ class MoneyViewController: UIViewController {
     
     func loadMoneyModel(index: Int) {
         guard let model = MoneyModels(rawValue: index) else { return }
-        let count = Int(arc4random_uniform(UInt32(5)))
+        let count = Int(arc4random_uniform(UInt32(3)))
         virtualObjectLoader.loadVirtualObject(name: model.name, count: count, completion: { [unowned self] result in
             switch result {
             case .failed:
@@ -143,7 +143,6 @@ class MoneyViewController: UIViewController {
         // Start the `ARSession`.
         resetTracking()
         loadingState = .ready
-
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -262,13 +261,28 @@ extension MoneyViewController {
         let scaleMatrix = float4x4(uniformScale: focusSquareScaleInverse)
         let focusSquareTransformWithoutScale = focusSquare.simdWorldTransform * scaleMatrix
         
+        
         // Add physics
-        let startPos = virtualObject.position
-        virtualObject.position = SCNVector3Make(startPos.x, startPos.y - 1.0, startPos.z)
-        virtualObject.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.dynamic, shape: nil)
-
+//        let startPos = virtualObject.position
+//        virtualObject.position = SCNVector3Make(startPos.x, startPos.y - 1.0, startPos.z)
+//        virtualObject.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+//        virtualObject.physicsBody?.mass = 1.0;
+        
         virtualObjectInteraction.selectedObject = virtualObject
-        virtualObject.setTransform(focusSquareTransformWithoutScale,
+        
+        func randomAdd() -> Float {
+            let a = Float(arc4random())
+            let b = Float(UInt32.max)
+            let random = (a / (b * 10)) * pow(Float(-1), Float(arc4random_uniform(2)))
+            return random
+        }
+        
+
+        var transform = focusSquareTransformWithoutScale
+        let translation = focusSquareTransformWithoutScale.translation
+        transform.translation = float3(x: translation.x + randomAdd(), y: translation.y - randomAdd()/10, z: translation.z + randomAdd())
+        
+        virtualObject.setTransform(transform,
                                    relativeTo: cameraTransform,
                                    smoothMovement: false,
                                    alignment: focusSquareAlignment,
