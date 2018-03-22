@@ -193,7 +193,7 @@
 				TargetAttributes = {
 					3929C4871E89EC2C00E00B60 = {
 						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = 2ZUGFWU8RB;
+						DevelopmentTeam = R8WKMFAHGR;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -386,11 +386,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZUGFWU8RB;
+				DEVELOPMENT_TEAM = R8WKMFAHGR;
 				INFOPLIST_FILE = "$(SRCROOT)/ARBanking/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ingARTeam.ARBanking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ing.ARTeam.ARBanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -407,11 +407,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZUGFWU8RB;
+				DEVELOPMENT_TEAM = R8WKMFAHGR;
 				INFOPLIST_FILE = "$(SRCROOT)/ARBanking/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ingARTeam.ARBanking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ing.ARTeam.ARBanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
