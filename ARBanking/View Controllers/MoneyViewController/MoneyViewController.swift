@@ -91,7 +91,7 @@ class MoneyViewController: UIViewController {
     }
     
     @objc func loadMoney() {
-        loadModel(modelName: "5bill")
+        loadModel(modelName: "500bill")
     }
 
 	override func viewDidAppear(_ animated: Bool) {
