@@ -21,7 +21,7 @@ class ObjectCell: UITableViewCell {
         didSet {
             objectTitleLabel.text = modelName.capitalized
             objectImageView.image = UIImage(named: modelName)
-            objectTitleLabel.textColor = UIColor.black
+            objectTitleLabel.textColor = UIColor(hue: 0.0639, saturation: 1, brightness: 1, alpha: 1.0)
         }
     }
 }
@@ -46,6 +46,9 @@ class VirtualObjectSelectionViewController: UITableViewController {
 	/// The rows of the 'VirtualObject's that are currently allowed to be placed.
 	var enabledVirtualObjectRows = Set<Int>()
     
+    // are of
+    var menuItemsArray:[String] = ["Savings goal","Look ahead"]
+
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -80,7 +83,7 @@ class VirtualObjectSelectionViewController: UITableViewController {
             fatalError("Expected `\(ObjectCell.self)` type for reuseIdentifier \(ObjectCell.reuseIdentifier). Check the configuration in Main.storyboard.")
         }
         
-        cell.modelName = "test"
+        cell.modelName = menuItemsArray[indexPath.row]
 
         if selectedVirtualObjectRows.contains(indexPath.row) {
             cell.accessoryType = .checkmark
