@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0FE05220639FD800F188D2 /* VirtualObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0FE05120639FD800F188D2 /* VirtualObjectSelection.swift */; };
 		148832411EFC3B250043E0AB /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148832401EFC3B250043E0AB /* FocusSquareSegment.swift */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
 		3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3929C48F1E89EC2C00E00B60 /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B0FE04F20639AE000F188D2 /* INGMe-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "INGMe-Regular.ttf"; sourceTree = "<group>"; };
+		0B0FE05020639AE000F188D2 /* INGMe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "INGMe-Bold.ttf"; sourceTree = "<group>"; };
+		0B0FE05120639FD800F188D2 /* VirtualObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelection.swift; sourceTree = "<group>"; };
 		148832401EFC3B250043E0AB /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* ARBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0FE04E20639ACD00F188D2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0B0FE05020639AE000F188D2 /* INGMe-Bold.ttf */,
+				0B0FE04F20639AE000F188D2 /* INGMe-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		113B64D01ECA81CA0071CBD1 /* Focus Square */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +95,7 @@
 		1488324B1EFC3EBF0043E0AB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B0FE05120639FD800F188D2 /* VirtualObjectSelection.swift */,
 				EA70FB7A2062EE93002AF4D9 /* MoneyViewController */,
 				C41366B81EB80DD400EC054A /* StatusViewController.swift */,
 			);
@@ -91,6 +105,7 @@
 		1488324C1EFC3ED00043E0AB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0B0FE04E20639ACD00F188D2 /* Fonts */,
 				3929C49E1E89EE4400E00B60 /* Models.scnassets */,
 				3929C4921E89EC2C00E00B60 /* Assets.xcassets */,
 				3929C4971E89EC2C00E00B60 /* Info.plist */,
@@ -238,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C812D8681F47628300344E73 /* ThresholdPanGesture.swift in Sources */,
+				0B0FE05220639FD800F188D2 /* VirtualObjectSelection.swift in Sources */,
 				EA70FB862062EE93002AF4D9 /* MoneyViewController+Actions.swift in Sources */,
 				C41366B91EB80DD400EC054A /* StatusViewController.swift in Sources */,
 				39C0B95A1E9C6B1F003FCA0C /* Utilities.swift in Sources */,

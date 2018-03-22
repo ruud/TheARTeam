@@ -47,6 +47,7 @@ class MoneyViewController: UIViewController {
 
     // MARK: - UI Elements
     
+    @IBOutlet weak var addObjectButton: UIButton!
     var focusSquare = FocusSquare()
     
     /// The view controller that displays the status and "restart experience" UI.
