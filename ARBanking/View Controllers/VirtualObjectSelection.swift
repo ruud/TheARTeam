@@ -14,14 +14,12 @@ class ObjectCell: UITableViewCell {
     static let reuseIdentifier = "ObjectCell"
     
     @IBOutlet weak var objectTitleLabel: UILabel!
-    @IBOutlet weak var objectImageView: UIImageView!
 	@IBOutlet weak var vibrancyView: UIVisualEffectView!
 	
     var modelName = "" {
         didSet {
             objectTitleLabel.text = modelName.capitalized
-            objectImageView.image = UIImage(named: modelName)
-            objectTitleLabel.textColor = UIColor.black
+            objectTitleLabel.textColor = UIColor(hue: 0.0639, saturation: 1, brightness: 1, alpha: 1.0)
         }
     }
 }
@@ -46,6 +44,9 @@ class VirtualObjectSelectionViewController: UITableViewController {
 	/// The rows of the 'VirtualObject's that are currently allowed to be placed.
 	var enabledVirtualObjectRows = Set<Int>()
     
+    // are of
+    var menuItemsArray:[String] = ["Change notes", "Choose saving goal","Check forecast ahead"]
+
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -72,7 +73,7 @@ class VirtualObjectSelectionViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,7 +81,7 @@ class VirtualObjectSelectionViewController: UITableViewController {
             fatalError("Expected `\(ObjectCell.self)` type for reuseIdentifier \(ObjectCell.reuseIdentifier). Check the configuration in Main.storyboard.")
         }
         
-        cell.modelName = "test"
+        cell.modelName = menuItemsArray[indexPath.row]
 
         if selectedVirtualObjectRows.contains(indexPath.row) {
             cell.accessoryType = .checkmark
