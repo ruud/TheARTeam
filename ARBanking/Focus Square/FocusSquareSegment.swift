@@ -50,7 +50,7 @@ extension FocusSquare {
         // MARK: - Configuration & Initialization
 
         /// Thickness of the focus square lines in m.
-        static let thickness: CGFloat = 0.018
+        static let thickness: CGFloat = 0.072
 
         /// Length of the focus square lines in m.
         static let length: CGFloat = 0.5  // segment length
