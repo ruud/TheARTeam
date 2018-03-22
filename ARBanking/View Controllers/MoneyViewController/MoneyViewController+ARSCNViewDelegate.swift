@@ -58,7 +58,7 @@ extension MoneyViewController: ARSCNViewDelegate, ARSessionDelegate {
                 // plane.materials = material
                 let planeNode = SCNNode(geometry: plane)
                 planeNode.name = "savings"
-                planeNode.position = SCNVector3(x: planeAnchor.center.x - 0.3, y: node.position.y - 0.1, z: planeAnchor.center.z - 0.6)
+                planeNode.position = SCNVector3(x: planeAnchor.center.x - 0.5, y: node.position.y - 0.1, z: planeAnchor.center.z - 0.5)
                 
                 // `SCNPlane` is vertically oriented in its local coordinate space, so
                 // rotate the plane to match the horizontal orientation of `ARPlaneAnchor`.
