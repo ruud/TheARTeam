@@ -104,6 +104,9 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
     func updateObjectToCurrentTrackingPosition() {
         guard let object = trackedObject, let position = currentTrackingPosition else { return }
         translate(object, basedOn: position, infinitePlane: translateAssumingInfinitePlane, allowAnimation: true)
+        if let saving = self.sceneView.scene.rootNode.childNode(withName: "savings", recursively: true) {
+            // TODO 
+        }
     }
 
     /// - Tag: didRotate
@@ -131,8 +134,8 @@ class VirtualObjectInteraction: NSObject, UIGestureRecognizerDelegate {
             selectedObject = tappedObject
         } else if let object = selectedObject {
             // Teleport the object to whereever the user touched the screen.
-            translate(object, basedOn: touchLocation, infinitePlane: false, allowAnimation: false)
-			sceneView.addOrUpdateAnchor(for: object)
+           // translate(object, basedOn: touchLocation, infinitePlane: false, allowAnimation: false)
+			//sceneView.addOrUpdateAnchor(for: object)
         }
     }
     
