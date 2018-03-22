@@ -130,15 +130,17 @@
                                     <segue destination="ri3-7p-e6d" kind="embed" id="uiU-1f-e8S"/>
                                 </connections>
                             </containerView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Total salary:  € 2.150" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-nx-40K">
-                                <rect key="frame" x="67" y="269" width="228" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Total salary:  € 2.150" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-nx-40K">
+                                <rect key="frame" x="1" y="105" width="249" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DxM-H7-5zB"/>
+                                </constraints>
                                 <color key="textColor" red="1" green="0.38431372549019605" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Y-X2-JEp" userLabel="Add Object Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Y-X2-JEp" userLabel="Add Object Button">
                                 <rect key="frame" x="163" y="601" width="48" height="48"/>
                                 <state key="normal" image="add">
                                     <color key="titleColor" red="0.85882352939999995" green="0.72941176470000002" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -155,6 +157,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="v0Y-X2-JEp" firstAttribute="centerX" secondItem="tnx-rc-95S" secondAttribute="centerX" id="9by-GG-bLu"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="Fga-nx-40K" secondAttribute="trailing" constant="125" id="BVH-gu-bFm"/>
                             <constraint firstItem="3cb-dQ-oXx" firstAttribute="centerX" secondItem="v0Y-X2-JEp" secondAttribute="centerX" id="BbY-vH-ekP"/>
                             <constraint firstAttribute="trailing" secondItem="R5W-V8-6lY" secondAttribute="trailing" id="J42-1v-Ihf"/>
                             <constraint firstItem="tnx-rc-95S" firstAttribute="top" secondItem="GBj-4O-Whc" secondAttribute="top" id="Sdx-fT-fqG"/>
@@ -167,8 +170,10 @@
                             <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="kLb-BI-xJ4"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="3cb-dQ-oXx" secondAttribute="bottom" constant="17" id="n1n-iv-xvt"/>
                             <constraint firstAttribute="bottom" secondItem="R5W-V8-6lY" secondAttribute="bottom" id="poH-DX-LIv"/>
-                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="v0Y-X2-JEp" secondAttribute="bottom" constant="25" id="umG-Gn-Fad"/>
+                            <constraint firstItem="Fga-nx-40K" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" constant="1" id="tWE-97-nzD"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="v0Y-X2-JEp" secondAttribute="bottom" constant="18" id="umG-Gn-Fad"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="wEL-Op-yTe"/>
+                            <constraint firstItem="Fga-nx-40K" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" constant="105" id="wql-6q-Mev"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="tnx-rc-95S" secondAttribute="trailing" id="yUU-ir-Rk1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GBj-4O-Whc"/>
