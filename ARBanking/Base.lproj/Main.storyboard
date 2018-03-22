@@ -184,7 +184,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" red="1" green="0.38431372549999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="INGMe" family="ING Me" pointSize="18"/>
+                                                        <fontDescription key="fontDescription" name="INGMe-Bold" family="ING Me" pointSize="18"/>
                                                         <color key="textColor" red="1" green="0.38431372549999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
