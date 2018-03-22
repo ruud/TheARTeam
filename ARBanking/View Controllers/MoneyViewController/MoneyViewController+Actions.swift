@@ -16,7 +16,11 @@ extension MoneyViewController: UIGestureRecognizerDelegate {
     
     // MARK: - Interface Actions
     
-    /// Displays the `VirtualObjectSelectionViewController` from the `addObjectButton` or in response to a tap gesture in the `sceneView`.
+    @IBAction func showVirtualObjectSelectionViewController() {
+        performSegue(withIdentifier: SegueIdentifier.showObjects.rawValue, sender: addObjectButton)
+    }
+    
+    
     
     /// Determines if the tap gesture for presenting the `VirtualObjectSelectionViewController` should be used.
     func gestureRecognizerShouldBegin(_: UIGestureRecognizer) -> Bool {
@@ -44,5 +48,33 @@ extension MoneyViewController: UIGestureRecognizerDelegate {
             self.isRestartAvailable = true
             self.loadingState = .ready
         }
+    }
+}
+
+extension MoneyViewController: UIPopoverPresentationControllerDelegate {
+    
+    // MARK: - UIPopoverPresentationControllerDelegate
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // All menus should be popovers (even on iPhone).
+        if let popoverController = segue.destination.popoverPresentationController, let button = sender as? UIButton {
+            popoverController.delegate = self
+            popoverController.sourceView = button
+            popoverController.sourceRect = button.bounds
+        }
+        
+        guard let identifier = segue.identifier,
+            let segueIdentifer = SegueIdentifier(rawValue: identifier),
+            segueIdentifer == .showObjects else { return }
+        
+        
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        //objectsViewController = nil
     }
 }
