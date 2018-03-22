@@ -33,9 +33,9 @@ class StatusViewController: UIViewController {
 
     // MARK: - IBOutlets
 
-    @IBOutlet weak private var messagePanel: UIVisualEffectView!
+   // @IBOutlet weak private var messagePanel: UIVisualEffectView!
     
-    @IBOutlet weak private var messageLabel: UILabel!
+   // @IBOutlet weak private var messageLabel: UILabel!
     
     @IBOutlet weak private var restartExperienceButton: UIButton!
 
@@ -80,7 +80,7 @@ class StatusViewController: UIViewController {
         // Cancel any previous hide timer.
         messageHideTimer?.invalidate()
 
-        messageLabel.text = text
+        //messageLabel.text = text
 
         // Make sure status is showing.
         setMessageHidden(false, animated: true)
@@ -146,17 +146,17 @@ class StatusViewController: UIViewController {
 	// MARK: - Panel Visibility
     
 	private func setMessageHidden(_ hide: Bool, animated: Bool) {
-        // The panel starts out hidden, so show it before animating opacity.
-        messagePanel.isHidden = false
-        
-        guard animated else {
-            messagePanel.alpha = hide ? 0 : 1
-            return
-        }
-
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.beginFromCurrentState], animations: {
-            self.messagePanel.alpha = hide ? 0 : 1
-        }, completion: nil)
+//        // The panel starts out hidden, so show it before animating opacity.
+//        messagePanel.isHidden = false
+//        
+//        guard animated else {
+//            messagePanel.alpha = hide ? 0 : 1
+//            return
+//        }
+//
+//        UIView.animate(withDuration: 0.2, delay: 0, options: [.beginFromCurrentState], animations: {
+//            self.messagePanel.alpha = hide ? 0 : 1
+//        }, completion: nil)
 	}
 }
 
