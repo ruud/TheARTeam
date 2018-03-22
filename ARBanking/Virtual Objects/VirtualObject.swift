@@ -89,8 +89,7 @@ class VirtualObject: SCNReferenceNode {
                       relativeTo cameraTransform: float4x4,
                       smoothMovement: Bool,
                       alignment: ARPlaneAnchor.Alignment,
-                      allowAnimation: Bool,
-                      firstAppear: Bool = false) {
+                      allowAnimation: Bool) {
         let cameraWorldPosition = cameraTransform.translation
         var positionOffsetFromCamera = newTransform.translation - cameraWorldPosition
         
@@ -120,18 +119,18 @@ class VirtualObject: SCNReferenceNode {
             simdPosition = cameraWorldPosition + positionOffsetFromCamera
         }
 		
-		updateAlignment(to: alignment, transform: newTransform, allowAnimation: allowAnimation, firstAppear: firstAppear)
+		updateAlignment(to: alignment, transform: newTransform, allowAnimation: allowAnimation)
     }
 	
 	// MARK: - Setting the object's alignment
 	
-    func updateAlignment(to newAlignment: ARPlaneAnchor.Alignment, transform: float4x4, allowAnimation: Bool, firstAppear: Bool = false) {
+	func updateAlignment(to newAlignment: ARPlaneAnchor.Alignment, transform: float4x4, allowAnimation: Bool) {
 		if isChangingAlignment {
 			return
 		}
 		
 		// Only animate if the alignment has changed.
-		var animationDuration = (newAlignment != currentAlignment && allowAnimation) ? 0.5 : 0
+		let animationDuration = (newAlignment != currentAlignment && allowAnimation) ? 0.5 : 0
 		
 		var newObjectRotation: Float?
 		if newAlignment == .horizontal && currentAlignment == .vertical {
@@ -143,17 +142,6 @@ class VirtualObject: SCNReferenceNode {
 		}
 		
 		currentAlignment = newAlignment
-        
-//        if firstAppear {
-//            animationDuration = 1
-//            var translation = transform.translation
-//            translation = float3(x: translation.x, y: translation.y + 1, z: translation.z)
-//            var newTransform = transform
-//            newTransform.translation = translation
-//            simdTransform = newTransform
-//
-//            position = SCNVector3Make(0, 1, 0)
-//        }
 		
 		SCNTransaction.begin()
 		SCNTransaction.animationDuration = animationDuration
