@@ -39,7 +39,10 @@ extension MoneyViewController: UIGestureRecognizerDelegate {
         statusViewController.hideSalaryTextView()
 
         virtualObjectLoader.removeAllVirtualObjects()
-
+        
+        let node = sceneView.scene.rootNode.childNode(withName: "savings", recursively: true)
+        node?.removeFromParentNode()
+        
         resetTracking()
         
         
