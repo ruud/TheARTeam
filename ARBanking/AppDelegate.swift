@@ -29,13 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 	
 	func applicationWillResignActive(_ application: UIApplication) {
-		if let viewController = self.window?.rootViewController as? MoneyViewController {
+		if let navigationController =  self.window?.rootViewController as? UINavigationController, let viewController = navigationController.topViewController as? MoneyViewController {
 			viewController.blurView.isHidden = false
 		}
 	}
 	
 	func applicationDidBecomeActive(_ application: UIApplication) {
-		if let viewController = self.window?.rootViewController as? MoneyViewController {
+		if let navigationController =  self.window?.rootViewController as? UINavigationController, let viewController = navigationController.topViewController as? MoneyViewController {
 			viewController.blurView.isHidden = true
 		}
 	}

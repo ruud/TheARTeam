@@ -27,6 +27,12 @@
 		EA70FB852062EE93002AF4D9 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70FB7C2062EE93002AF4D9 /* MoneyViewController.swift */; };
 		EA70FB862062EE93002AF4D9 /* MoneyViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70FB7D2062EE93002AF4D9 /* MoneyViewController+Actions.swift */; };
 		EA70FB872062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70FB7E2062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift */; };
+		EAECC42A2063E0AA00DB7A40 /* LoginViewControllerFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAECC4292063E0AA00DB7A40 /* LoginViewControllerFR.swift */; };
+		EAECC4312063E10800DB7A40 /* iPhone X - login2.png in Resources */ = {isa = PBXBuildFile; fileRef = EAECC42C2063E10800DB7A40 /* iPhone X - login2.png */; };
+		EAECC4322063E10800DB7A40 /* iPhone X - login.png in Resources */ = {isa = PBXBuildFile; fileRef = EAECC42D2063E10800DB7A40 /* iPhone X - login.png */; };
+		EAECC4332063E10800DB7A40 /* iPhone X - notification.png in Resources */ = {isa = PBXBuildFile; fileRef = EAECC42E2063E10800DB7A40 /* iPhone X - notification.png */; };
+		EAECC4342063E10800DB7A40 /* OverviewPage.png in Resources */ = {isa = PBXBuildFile; fileRef = EAECC42F2063E10800DB7A40 /* OverviewPage.png */; };
+		EAECC4352063E10800DB7A40 /* DiscoverDialog.png in Resources */ = {isa = PBXBuildFile; fileRef = EAECC4302063E10800DB7A40 /* DiscoverDialog.png */; };
 		EAF547B82062EA700023F7CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EAF547B72062EA700023F7CE /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +60,12 @@
 		EA70FB7C2062EE93002AF4D9 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 		EA70FB7D2062EE93002AF4D9 /* MoneyViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoneyViewController+Actions.swift"; sourceTree = "<group>"; };
 		EA70FB7E2062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoneyViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		EAECC4292063E0AA00DB7A40 /* LoginViewControllerFR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerFR.swift; sourceTree = "<group>"; };
+		EAECC42C2063E10800DB7A40 /* iPhone X - login2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone X - login2.png"; sourceTree = "<group>"; };
+		EAECC42D2063E10800DB7A40 /* iPhone X - login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone X - login.png"; sourceTree = "<group>"; };
+		EAECC42E2063E10800DB7A40 /* iPhone X - notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone X - notification.png"; sourceTree = "<group>"; };
+		EAECC42F2063E10800DB7A40 /* OverviewPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverviewPage.png; sourceTree = "<group>"; };
+		EAECC4302063E10800DB7A40 /* DiscoverDialog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiscoverDialog.png; sourceTree = "<group>"; };
 		EAF547B72062EA700023F7CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +109,7 @@
 		1488324B1EFC3EBF0043E0AB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EAECC4292063E0AA00DB7A40 /* LoginViewControllerFR.swift */,
 				0B0FE05120639FD800F188D2 /* VirtualObjectSelection.swift */,
 				EA70FB7A2062EE93002AF4D9 /* MoneyViewController */,
 				C41366B81EB80DD400EC054A /* StatusViewController.swift */,
@@ -138,6 +151,7 @@
 		3929C48A1E89EC2C00E00B60 /* ARBanking */ = {
 			isa = PBXGroup;
 			children = (
+				EAECC42B2063E10800DB7A40 /* images */,
 				3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */,
 				C8C2AC511F3A545C00E86BA3 /* VirtualObjectInteraction.swift */,
 				C812D8671F47628300344E73 /* ThresholdPanGesture.swift */,
@@ -178,6 +192,18 @@
 			path = MoneyViewController;
 			sourceTree = "<group>";
 		};
+		EAECC42B2063E10800DB7A40 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EAECC42C2063E10800DB7A40 /* iPhone X - login2.png */,
+				EAECC42D2063E10800DB7A40 /* iPhone X - login.png */,
+				EAECC42E2063E10800DB7A40 /* iPhone X - notification.png */,
+				EAECC42F2063E10800DB7A40 /* OverviewPage.png */,
+				EAECC4302063E10800DB7A40 /* DiscoverDialog.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,7 +236,7 @@
 				TargetAttributes = {
 					3929C4871E89EC2C00E00B60 = {
 						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = R8WKMFAHGR;
+						DevelopmentTeam = 2ZUGFWU8RB;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -239,12 +265,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAECC4352063E10800DB7A40 /* DiscoverDialog.png in Resources */,
 				3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */,
+				EAECC4332063E10800DB7A40 /* iPhone X - notification.png in Resources */,
 				39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */,
 				0BE04C782063D53100C8E75D /* INGMe-Regular.ttf in Resources */,
+				EAECC4312063E10800DB7A40 /* iPhone X - login2.png in Resources */,
+				EAECC4342063E10800DB7A40 /* OverviewPage.png in Resources */,
 				0BE04C772063D52F00C8E75D /* INGMe-Bold.ttf in Resources */,
 				EAF547B82062EA700023F7CE /* README.md in Resources */,
 				3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */,
+				EAECC4322063E10800DB7A40 /* iPhone X - login.png in Resources */,
 				3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +298,7 @@
 				C8D71A001F3B7D3D0086AD64 /* VirtualObject.swift in Sources */,
 				C42A71BD1E9C0AF200944367 /* FocusSquare.swift in Sources */,
 				EA70FB872062EE93002AF4D9 /* MoneyViewController+ARSCNViewDelegate.swift in Sources */,
+				EAECC42A2063E0AA00DB7A40 /* LoginViewControllerFR.swift in Sources */,
 				3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */,
 				EA70FB852062EE93002AF4D9 /* MoneyViewController.swift in Sources */,
 				C46356681EF9CC530080C8D9 /* VirtualObjectLoader.swift in Sources */,
@@ -406,11 +438,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R8WKMFAHGR;
+				DEVELOPMENT_TEAM = 2ZUGFWU8RB;
 				INFOPLIST_FILE = "$(SRCROOT)/ARBanking/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ing.ARTeam.ARBanking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ingARTeam.ARBanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -427,11 +459,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R8WKMFAHGR;
+				DEVELOPMENT_TEAM = 2ZUGFWU8RB;
 				INFOPLIST_FILE = "$(SRCROOT)/ARBanking/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ing.ARTeam.ARBanking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ingARTeam.ARBanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
