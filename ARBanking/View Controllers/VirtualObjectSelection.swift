@@ -14,13 +14,11 @@ class ObjectCell: UITableViewCell {
     static let reuseIdentifier = "ObjectCell"
     
     @IBOutlet weak var objectTitleLabel: UILabel!
-    @IBOutlet weak var objectImageView: UIImageView!
 	@IBOutlet weak var vibrancyView: UIVisualEffectView!
 	
     var modelName = "" {
         didSet {
             objectTitleLabel.text = modelName.capitalized
-            objectImageView.image = UIImage(named: modelName)
             objectTitleLabel.textColor = UIColor(hue: 0.0639, saturation: 1, brightness: 1, alpha: 1.0)
         }
     }
@@ -47,7 +45,7 @@ class VirtualObjectSelectionViewController: UITableViewController {
 	var enabledVirtualObjectRows = Set<Int>()
     
     // are of
-    var menuItemsArray:[String] = ["Savings goal","Look ahead"]
+    var menuItemsArray:[String] = ["Change notes", "Choose saving goal","Check forecast ahead"]
 
     weak var delegate: VirtualObjectSelectionViewControllerDelegate?
     
@@ -75,7 +73,7 @@ class VirtualObjectSelectionViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

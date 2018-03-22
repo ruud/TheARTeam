@@ -294,14 +294,14 @@ extension MoneyViewController {
         func randomAdd() -> Float {
             let a = Float(arc4random())
             let b = Float(UInt32.max)
-            let random = (a / (b * 10)) * pow(Float(-1), Float(arc4random_uniform(2)))
+            let random = (a / b) * pow(Float(-1), Float(arc4random_uniform(2)))
             return random
         }
         
 
         var transform = focusSquareTransformWithoutScale
         let translation = focusSquareTransformWithoutScale.translation
-        transform.translation = float3(x: translation.x + randomAdd()/2, y: translation.y - randomAdd()/10, z: translation.z + randomAdd())
+        transform.translation = float3(x: translation.x + randomAdd()/10, y: translation.y - randomAdd()/100, z: translation.z + randomAdd()/10)
         
         virtualObject.setTransform(transform,
                                    relativeTo: cameraTransform,
@@ -309,7 +309,7 @@ extension MoneyViewController {
                                    alignment: focusSquareAlignment,
                                    allowAnimation: false)
         
-        
+        virtualObject.objectRotation = randomAdd()
         
         
         updateQueue.async {
@@ -318,10 +318,10 @@ extension MoneyViewController {
             
             let animation = CABasicAnimation(keyPath: "position")
             let position = virtualObject.position
-            let iniXY = randomAdd() * 20
+            let iniXY = randomAdd() * 2
             animation.fromValue = SCNVector3Make(iniXY, position.y+1, iniXY)
             animation.toValue = position
-            animation.duration = 0.5 + Double(arc4random_uniform(10)) / 10
+            animation.duration = 0.7 + Double(arc4random_uniform(10)) / 7
             virtualObject.addAnimation(animation, forKey: nil)
         }
     }
